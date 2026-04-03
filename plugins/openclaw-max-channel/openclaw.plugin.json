@@ -1,0 +1,28 @@
+{
+  "id": "openclaw-max-channel",
+  "kind": "channel",
+  "channels": ["openclaw-max-channel"],
+  "name": "MAX",
+  "description": "MAX (max.ru) messenger channel plugin",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "max": {
+        "type": "object",
+        "properties": {
+          "token": { "type": "string" },
+          "allowFrom": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "dmPolicy": {
+            "type": "string",
+            "enum": ["allowlist", "open"]
+          }
+        },
+        "required": ["token"]
+      }
+    }
+  }
+}

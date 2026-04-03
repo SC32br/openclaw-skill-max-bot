@@ -1,0 +1,15 @@
+{
+  "name": "openclaw-max-channel",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MAX (max.ru) channel plugin for OpenClaw",
+  "openclaw": {
+    "extensions": ["./index.js"],
+    "setupEntry": "./setup-entry.js",
+    "channel": {
+      "id": "openclaw-max-channel",
+      "label": "MAX",
+      "blurb": "Connect OpenClaw to MAX messenger (max.ru)"
+    }
+  }
+}
