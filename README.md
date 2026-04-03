@@ -198,7 +198,7 @@ Your MAX user_id is **not the same as your Telegram ID** — it's a completely s
    ```
 4. Look for a line like:
    ```
-   [MAX] Inbound from 7445093 — text: "hello"
+   [MAX] Inbound from 123456789 — text: "hello"
    ```
 5. The number after `from` is your MAX user_id
 6. Add it to `allowFrom` in `openclaw.json`
