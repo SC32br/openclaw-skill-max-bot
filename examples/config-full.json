@@ -1,0 +1,44 @@
+{
+  "plugins": {
+    "allow": ["openclaw-max-channel"],
+    "load": {
+      "paths": ["./plugins/openclaw-max-channel"]
+    },
+    "entries": {
+      "openclaw-max-channel": {
+        "enabled": true,
+        "config": {
+          "max": {
+            "token": "${MAX_TOKEN}",
+
+            "allowFrom": [
+              "your_max_user_id_here"
+            ],
+
+            "dmPolicy": "allowlist",
+
+            "whisperBin": "whisper",
+
+            "whisperModel": "small",
+
+            "whisperLanguage": "ru",
+
+            "_comment_dmPolicy": "Options: 'allowlist' (only users in allowFrom) or 'open' (anyone can write)",
+            "_comment_whisperModel": "Options: tiny | base | small | medium. small is recommended.",
+            "_comment_whisperBin": "Path to whisper CLI. If installed via pip, usually just 'whisper'. Or use full path like '/usr/local/bin/whisper'"
+          }
+        }
+      }
+    }
+  },
+
+  "_instructions": {
+    "step1": "Copy this file content into ~/.openclaw/openclaw.json (merge with existing config)",
+    "step2": "Set MAX_TOKEN in ~/.openclaw/.env",
+    "step3": "Run: openclaw gateway restart",
+    "step4": "Send a message to your MAX bot to find your user_id",
+    "step5": "Add your user_id to allowFrom above",
+    "step6": "Run: openclaw gateway restart again",
+    "findUserId": "Run: openclaw gateway logs | grep Inbound | tail -5"
+  }
+}
