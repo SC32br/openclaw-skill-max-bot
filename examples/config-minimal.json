@@ -1,0 +1,20 @@
+{
+  "plugins": {
+    "allow": ["openclaw-max-channel"],
+    "load": {
+      "paths": ["./plugins/openclaw-max-channel"]
+    },
+    "entries": {
+      "openclaw-max-channel": {
+        "enabled": true,
+        "config": {
+          "max": {
+            "token": "${MAX_TOKEN}",
+            "allowFrom": ["your_max_user_id_here"],
+            "dmPolicy": "allowlist"
+          }
+        }
+      }
+    }
+  }
+}
